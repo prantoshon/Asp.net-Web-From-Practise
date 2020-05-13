@@ -53,34 +53,9 @@ namespace Registration
             }
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            String str = "select * from hrd.Department where (Code like '%' + @search + '%')";
-            SqlCommand xp = new SqlCommand(str, con);
-            xp.Parameters.Add("@search", SqlDbType.NVarChar).Value = TextBox1.Text;
-            con.Open();
-            xp.ExecuteNonQuery();
-            SqlDataAdapter da = new SqlDataAdapter();
-            da.SelectCommand = xp;
-            DataSet ds = new DataSet();
-            da.Fill(ds, "Code");
-            GridView1.DataSource = ds;
-            GridView1.DataBind();
-            con.Close();
-          
-        }
+   
 
-        protected void GridView1_RowEditing(object sender, GridViewEditEventArgs e)
-        {
-            GridView1.EditIndex = e.NewEditIndex;
-            GridView1.DataBind();
-        }
-
-        protected void GridView1_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
-        {
-            GridView1.EditIndex = -1;
-            GridView1.DataBind();
-        }
+     
 
         protected void GridView1_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
@@ -95,16 +70,6 @@ namespace Registration
             GridView1.DataBind();
         }
 
-        protected void Unnamed1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void Unnamed1_Click1(object sender, EventArgs e)
-        {
-
-           
-        }
         public override void VerifyRenderingInServerForm(Control control)
         {
         }
