@@ -11,7 +11,7 @@ namespace Registration
 {
     public partial class Registration : System.Web.UI.Page
     {
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-HM3JBK0\\SQLEXPRESS;Initial Catalog=PPL;Integrated Security=True");
+        SqlConnection con = new SqlConnection("Data Source=DESKTOP-HM3JBK0\\SQLEXPRESS;Initial Catalog=Dummy;Integrated Security=True");
        
         protected void Page_Load(object sender, EventArgs e)
         {
